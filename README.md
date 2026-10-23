@@ -41,17 +41,6 @@ The results are based on a single educational dataset and should not be used for
 2. Run the notebook cells in order. The notebook uses **KaggleHub to download the dataset automatically** and reads the CSV from the downloaded directory.
 3. Continue running the preprocessing, training, and evaluation cells. Hyperparameter tuning may take longer than the other steps.
 
-The KaggleHub data-loading step uses this approach:
-
-```python
-import os
-import kagglehub
-import pandas as pd
-
-path = kagglehub.dataset_download("aouatifcherdid/healthcare-dataset-stroke-data")
-df = pd.read_csv(os.path.join(path, "healthcare-dataset-stroke-data.csv"))
-```
-
 If `kagglehub` is not available in the environment, install it with `%pip install kagglehub`. Other libraries used include scikit-learn, imbalanced-learn, XGBoost, pandas, NumPy, Matplotlib, Seaborn, Plotly, SciPy, and missingno.
 
 ## Repository contents
